@@ -59,15 +59,6 @@ function change(){
         goto gofood;
         }else{
         echo "\n".color("red","-] Message: ".$message);
-        reff:
-        $data = '{"referral_code":"G-75SR565"}';    
-        $claim = request("/customer_referrals/v1/campaign/enrolment", $token, $data);
-        $message = fetch_value($claim,'"message":"','"');
-        if(strpos($claim, 'Promo kamu sudah bisa dipakai')){
-        echo "\n".color("green","+] Message: ".$message);
-        goto gofood;
-        }else{
-        echo "\n".color("red","-] Message: ".$message);
         }
         gofood:
         echo "\n".color("yellow","!] Claim voc GOCAR pot 14K");
